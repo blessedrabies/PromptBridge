@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PromptBridge
 
-## Getting Started
+Convert between SD WebUI (A1111/Forge) prompt text and ComfyUI workflow JSON.
 
-First, run the development server:
+**Live**: [promptbridge-rho.vercel.app](https://promptbridge-rho.vercel.app)
+
+## Features
+
+- **SD WebUI → ComfyUI**: Paste generation data from CivitAI or SD WebUI, get a ready-to-use ComfyUI workflow JSON
+- **ComfyUI → SD WebUI**: Upload or paste ComfyUI workflow JSON, get SD WebUI format text
+- **FLUX support**: Auto-detects FLUX models and generates optimized pipeline (cfg=1, euler, simple)
+- **LoRA conversion**: Extracts `<lora:name:weight>` tags and creates LoraLoader nodes
+- **20+ samplers**: DPM++ 2M/3M SDE, Euler, DDIM, UniPC, Heun, and more with Karras/Exponential variants
+- **Forge compatibility**: Supports Forge-specific metadata format (`width`/`height` keys)
+- **Smart warnings**: SDXL resolution mismatch, Hires fix, Clip skip, BREAK keyword, SD3 models
+
+## How to Use
+
+1. Go to a CivitAI image page
+2. Click **Generation data** → **COPY ALL**
+3. Paste into PromptBridge
+4. Click **Convert**
+5. Download the ComfyUI workflow JSON
+
+## Tech Stack
+
+- Next.js (App Router) + TypeScript
+- Tailwind CSS + shadcn/ui
+- Supabase (stats tracking)
+- Vercel (hosting)
+
+## Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contributing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Issues and pull requests are welcome. Please report bugs with the input data that caused the issue.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## License
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+GPL-3.0
