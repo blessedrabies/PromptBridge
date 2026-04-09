@@ -9,7 +9,7 @@ export function Navbar() {
         </Link>
         <nav className="flex items-center gap-4">
           <a
-            href="https://github.com"
+            href="https://github.com/blessedrabies/PromptBridge"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm text-zinc-400 transition-colors hover:text-zinc-50"
