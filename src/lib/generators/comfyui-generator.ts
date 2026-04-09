@@ -92,10 +92,9 @@ function buildLoraChain(
     prevClipSourceSlot = 1;
   }
 
-  // The last model/clip output link ids
-  const lastLoraIdx = loras.length - 1;
-  const finalModelLinkId = links[lastLoraIdx * 4 + 2][0]; // 3rd link per lora iteration
-  const finalClipLinkId = links[lastLoraIdx * 4 + 3][0];  // 4th link per lora iteration
+  // The last output link ids are the last two linkIds allocated
+  const finalModelLinkId = linkId - 2;
+  const finalClipLinkId = linkId - 1;
 
   return {
     nodes,
