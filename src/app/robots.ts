@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://promptbridge-rho.vercel.app/sitemap.xml",
+    sitemap: "https://promptbridge.dev/sitemap.xml",
   };
 }

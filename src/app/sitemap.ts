@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://promptbridge-rho.vercel.app",
+      url: "https://promptbridge.dev",
       lastModified: new Date(),
       changeFrequency: "weekly",
       priority: 1,

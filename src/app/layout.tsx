@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://promptbridge-rho.vercel.app";
+const siteUrl = "https://promptbridge.dev";
 
 export const metadata: Metadata = {
   title: "PromptBridge - SD WebUI ↔ ComfyUI Converter",

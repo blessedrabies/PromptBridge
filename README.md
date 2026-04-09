@@ -2,7 +2,7 @@
 
 Convert between SD WebUI (A1111/Forge) prompt text and ComfyUI workflow JSON.
 
-**Live**: [promptbridge-rho.vercel.app](https://promptbridge-rho.vercel.app)
+**Live**: [promptbridge.dev](https://promptbridge.dev)
 
 ## Features
 
